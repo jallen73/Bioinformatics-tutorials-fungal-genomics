@@ -1,4 +1,4 @@
-## Tutorial #1 Introduction to Google Cloud
+## Tutorial #1 Setting a Budget in Google Cloud
 
 Before beginning this tutorial you should sign up and set up an account on Google Cloud.
 
