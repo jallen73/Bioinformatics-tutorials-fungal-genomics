@@ -80,10 +80,10 @@ You will notice that the output of this command ends up printing the concatenate
     cat L_columbiana_ITS.fasta L_vulpina_ITS.fasta | grep ‘>’
 
 
-nano - a simple text editor that can be used in the console
-cat - concatenates (i.e., sticks together) the contents of multiple files
-ls = list files in a directory
-less = shows the contents of a filed one page at a time
-echo = prints text or string data in standard out
-cd = change directory
-mkdir = make a directory
+nano - a simple text editor that can be used in the console  
+cat - concatenates (i.e., sticks together) the contents of multiple files  
+ls = list files in a directory  
+less = shows the contents of a filed one page at a time  
+echo = prints text or string data in standard out  
+cd = change directory  
+mkdir = make a directory  
