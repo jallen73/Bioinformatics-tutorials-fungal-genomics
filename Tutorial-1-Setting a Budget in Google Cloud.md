@@ -1,6 +1,6 @@
 ## Tutorial #1 Setting a Budget in Google Cloud
 
-Before beginning this tutorial you should sign up and set up an account on Google Cloud.
+Before beginning this tutorial you should sign up and set up an account on **[Google Cloud](https://cloud.google.com)**.
 
 ### Part 1. Setting up a budget in google cloud
 
