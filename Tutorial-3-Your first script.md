@@ -33,6 +33,7 @@ We can, and will often, pass files as inputs into scripts as well. We will write
         
 2. Write your program using the variable ‘$1’ to indicate the first item passed to the program when you run it. That is, $1 is ascribable to what you put in the command line after the name of the script as you run it. Type the following text into your script.
 <!-- -->
+       #!/bin/bash
        grep ‘>’ $1
        
 3.	Exit nano and save your changes. Use the chmod command to make the file executable. 
