@@ -79,6 +79,7 @@ You will notice that the output of this command ends up printing the concatenate
 <!-- -->
     cat L_columbiana_ITS.fasta L_vulpina_ITS.fasta | grep ‘>’
 
+#### List of commands used in this tutorial
 
 nano = a simple text editor that can be used in the console  
 cat = concatenates (i.e., sticks together) the contents of multiple files  
