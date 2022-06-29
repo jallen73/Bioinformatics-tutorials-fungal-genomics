@@ -79,6 +79,20 @@ You will notice that the output of this command ends up printing the concatenate
 <!-- -->
     cat L_columbiana_ITS.fasta L_vulpina_ITS.fasta | grep ‘>’
 
+### Help!
+
+If a command is not working, quadruple check that you typed every tiny piece of it correctly. No errors or typos are tolerated when working in the command line. There is no approximate matching or spell check.
+
+There is no safety net built in for overwriting files. You will not be asked if you truly want to run something before you push go, and you can lose a lot of progress if you forget this. It’s essential to version outputs or to give them unique names if you are running the same process multiple times.
+
+The ‘man’ command will give you more information about Linux commands. Try typing the following for an example. 
+<!-- -->
+    man echo
+
+If you are getting errors in return for commands, or something just isn’t working or you want to figure out which program to use or how to use it just **GOOGLE IT**. Stackoverflow will likely come up in your googling and it is a great website full of great resources. 
+
+You can often find more information about a program by typing the name of the program then one of the following flags: -h or -help or --help
+
 #### List of commands used in this tutorial
 
 nano = a simple text editor that can be used in the console  
