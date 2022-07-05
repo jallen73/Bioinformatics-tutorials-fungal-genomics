@@ -46,7 +46,61 @@ You can read more about what each of the values in the output table mean for how
 
 12.	The query sequence will be the same one we used for the last search, so type ‘EU558851.1’ into the query box. The subject sequences will be the fasta file you just downloaded. Use the ‘Choose File’ button and add your fasta file here. Then click BLAST. Once the search finishes, take a look at the ouput.
 
-In the second part of this tutorial you searched a smaller set of sequences for similarity to your query sequence, rather than searching the entire NCBI nucleotide database. We will not repeat this smaller search in your Google Cloud VM.
+You just searched a smaller set of sequences for similarity to your query sequence, rather than searching the entire NCBI nucleotide database. We will now repeat this smaller search in your Google Cloud VM.
 
 #### Command-line BLAST on the virtual machine
 
+1. To navigate to your virtual machine, go to the Google Cloud Console, then click the three horizontal lines in the top left corner > Compute Engine > VM Instances.
+
+![image](https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png)
+
+2. Once you are on this page, click the three vertical dots on the far right of the VM and clicke 'Start/Resume.' Once the circle to the left turns green with a white check mark, click SSH to open a shell.
+
+![image](https://user-images.githubusercontent.com/17323363/177423041-38e4d20d-f3ef-4af6-b616-d458334db20a.png)
+
+3. We will start by creating a conda environment for blast and installing it. Execute the following command. When asked whether or not you would like to proceed, type 'y' for yes. The options after calling conda indicate the following:   
+        'create' - make a new conda environment   
+        '-n blast' - call your new conda environment 'blast'  
+        '-c bioconda' - search the bioconda repository  
+        'blast' - this is the name of the package you would like to find and download 
+<!-- -->
+        conda create -n blast -c bioconda blast 
+        
+4. To start your newly created conda environment execute the following command.
+<!-- -->
+        conda activate blast
+
+5. To view the options available for blastn execute the following command.
+<!-- -->
+        blastn -h
+        
+6. Next we will want to do some searching, but we need to move some sequence data on to the VM to do so. Keeping files and directories organized is one of the most importan skills a bioinformatician can possess, and we will start building some file organization habits from the start. First, make a directory called 'Tutorial5-BLAST' then move into it using the following commands.
+<!-- -->
+        mkdir Tutorial5-BLAST
+        cd Tutorial5-BLAST
+        
+7. Make a file called PSMA.fasta whose contents are the sequence below using nano (check Tutorial #2 for hints). 
+
+>EU558739.1 Pseudocyphellaria mallota voucher Stenroos 5556 (TUR) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
+GTCGTAACAAGGTCTCCGTAGGTGAACCTGCGGAGGGATCATTACCGAGAGAGGCTCGCGCCTCGGGGGC
+TTTGGCCCCCGTCGTCTCACCCGTGCGCACATCCACCGGTGTTGCCTTTGGCGGCCTCTGCCGCGCAAGA
+ACCCCAACTCTTTGCAACGTTTGTGTCGTCCGAGTGGTTACCGAATAACTAAAACTTTCAACAACGGATC
+TCTTGGTTCTGGCATCGATGAAGAACGCAGCGAAATGCGATAAGTAATGTGAATTGCAGAATTCAGTGAA
+TCATCGAATCTTTGAACGCACATTGCGCCCCTTGGCATTCCGAGGGGCATACCTGTTCGAGCGTCAGTAC
+ACCCCTCCAGCGCGGCTGGGTGATGGGCGGCGTCCCCCCCGGGGACGGGCCCGAACGGCAGTGGCGGCCC
+GGCGTGGCTCCCAGCGCGGTGAATTTCGTTCGCTGGGGAGGCGCGCCCGGGTCCGGCCAGTCAACCCTGT
+GGCTTTGCAGTTTGACCTCGGATCAGGTAGGGATA
+
+8. Upload the fasta file you downloaded earlier with the 12 *Pseudocyphellaria mallota* ITS sequences (see Tutorial #4 for how to upload a file). You will notice that the file was not uploaded into your current directory, Tutorial5-BLAST, but was instead uploaded to your home directory. You can move it into your current directory using the following command. Note that we are directing the command to find the file named 'sequence.fasta' in the directory above the current directly using '..' and we are telling it to put the file in our current directory using '.'
+<!-- -->
+        mv ../sequence.fasta .
+ 
+ Then rename the file using the following command.
+ <!-- -->
+        mv sequence.fasta PseuITS.fasta
+
+9. To make the sequences in PseuITS.fasta into a blast database execute the following command.
+<!-- -->
+        makeblastdb -in PseuITS.fasta -out PseuITS.fasta -dbtype nucl
+        
+        
