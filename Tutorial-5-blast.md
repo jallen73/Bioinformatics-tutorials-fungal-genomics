@@ -24,6 +24,8 @@ We will start by working with the National Center for Biotechnology Information 
 
 ![image](https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png)
 
+<img src="https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png" width="200">
+
 Here is what your query should look like
 
 ![image](https://user-images.githubusercontent.com/17323363/177419206-b1c08428-e568-467a-bf31-67de26613df5.png)
