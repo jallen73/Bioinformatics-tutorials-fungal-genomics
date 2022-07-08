@@ -10,11 +10,11 @@ Once you are logged into Google Cloud you can follow the steps below starting fr
 
 ##### 1.	Click the three horizontal bars in the top left of the main screen, then select ‘Billing.’
 
- ![image](https://user-images.githubusercontent.com/17323363/176060997-04ed7c58-fe1a-4c26-84fa-5df9d87bd746.png)
+ <img src="https://user-images.githubusercontent.com/17323363/176060997-04ed7c58-fe1a-4c26-84fa-5df9d87bd746.png" width="600">
  
 ##### 2.	Next, click ‘Budgets & alerts’ on the left.
 
-![image](https://user-images.githubusercontent.com/17323363/176061088-06d9610c-47e2-4cda-8867-50356d15e3b0.png)
+<img src="https://user-images.githubusercontent.com/17323363/176061088-06d9610c-47e2-4cda-8867-50356d15e3b0.png" width="600">
  
 ##### 3.	Click ‘CREATE BUDGET.’
 
@@ -22,9 +22,9 @@ Once you are logged into Google Cloud you can follow the steps below starting fr
  
 ##### 4.	In step 1, name the budget ‘Bioinformatics Class,’ and set the time range to ‘Quarterly.’ Then, scroll down and click ‘Next.’
 
-![image](https://user-images.githubusercontent.com/17323363/176061154-381bcf2b-d574-4bc3-9633-af68ce1da474.png)
+<img src="https://user-images.githubusercontent.com/17323363/176061154-381bcf2b-d574-4bc3-9633-af68ce1da474.png" width="300">
  
 ##### 5.	Set your target amount to $100, then click ‘Finish.’
  
-![image](https://user-images.githubusercontent.com/17323363/176061193-37a0b7be-8252-48c6-a794-8d16d5a64895.png)
+<img src="https://user-images.githubusercontent.com/17323363/176061193-37a0b7be-8252-48c6-a794-8d16d5a64895.png" width="300">
 
