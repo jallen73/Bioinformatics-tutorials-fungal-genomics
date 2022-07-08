@@ -22,13 +22,11 @@ We will start by working with the National Center for Biotechnology Information 
 
 8.	Go back to the previous tab. You can either copy-paste the accession number (circled below in red) or the full sequence from this page to the ‘Enter Query Sequence’ box on the blast page.
 
-![image](https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png)
+<img src="https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png" width="600">
 
-<img src="https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png" width="200">
+Here is what your query should look like:
 
-Here is what your query should look like
-
-![image](https://user-images.githubusercontent.com/17323363/177419206-b1c08428-e568-467a-bf31-67de26613df5.png)
+<img src="https://user-images.githubusercontent.com/17323363/177419206-b1c08428-e568-467a-bf31-67de26613df5.png" width ="600">
 
 There are quite a few different options and settings you can change on this page. For now we will leave the defaults in place, scroll down and push the ‘BLAST’ button.
 
@@ -40,11 +38,11 @@ You can read more about what each of the values in the output table mean for how
 
 10.	Next, we want to select all 12 of these sequences. Click ‘send to’ in the top right, select ‘file’ and select ‘FASTA’ for the format. Then, click 'Create File' and a fasta file will download.
 
-![image](https://user-images.githubusercontent.com/17323363/177420539-b67bcf33-c063-4170-8b8e-9ff8fdffe15d.png)
+<img src="https://user-images.githubusercontent.com/17323363/177420539-b67bcf33-c063-4170-8b8e-9ff8fdffe15d.png" width="400">
 
 11. Navigate back to the nucleotide BLAST search page. Select the ‘Align two or more sequences’ box, which is circled in red below. 
 
-![image](https://user-images.githubusercontent.com/17323363/177420709-1e09a218-1a1a-4993-a35e-d83d81b47fcc.png)
+<img src="https://user-images.githubusercontent.com/17323363/177420709-1e09a218-1a1a-4993-a35e-d83d81b47fcc.png" width="400">
 
 12.	The query sequence will be the same one we used for the last search, so type ‘EU558851.1’ into the query box. The subject sequences will be the fasta file you just downloaded. Use the ‘Choose File’ button and add your fasta file here. Then click BLAST. Once the search finishes, take a look at the ouput.
 
@@ -53,8 +51,7 @@ You just searched a smaller set of sequences for similarity to your query sequen
 #### Command-line BLAST on the virtual machine
 
 1. To navigate to your virtual machine, go to the Google Cloud Console, then click the three horizontal lines in the top left corner > Compute Engine > VM Instances.
-
-![image](https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png)
+<img src="https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png" width="400">
 
 2. Once you are on this page, click the three vertical dots on the far right of the VM and clicke 'Start/Resume.' Once the circle to the left turns green with a white check mark, click SSH to open a shell.
 
