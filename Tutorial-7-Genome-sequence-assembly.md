@@ -36,7 +36,7 @@ To download the reads use the following command.
 <!-- -->
         wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR738/ERR7385058/Sulcaria_isidiifera.tar.gz
 
-The download will take a while, so if you want to leave this screen while the download continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
+**The download will take a while**, so if you want to leave this screen while the download continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
 <!-- -->
         screen -r assembly
         
@@ -72,3 +72,7 @@ Let’s break this script down a bit. On the first line we have the header text 
 <!-- -->
         chmod +x SUISassembly.sh
 
+4. To run your your script use the following command.
+<!-- -->
+        bash -i SUISassembly.sh
+**Now is a good time to take a break. The assembly will take at least half a day to run.**
