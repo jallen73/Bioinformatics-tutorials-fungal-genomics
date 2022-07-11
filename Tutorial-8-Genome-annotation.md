@@ -14,12 +14,12 @@
 <!-- -->
         conda create -n quast -c bioconda quast
         conda activate quast
-        quast SUIS_asco_consensus.fasta
+        quast SUIS_consensus.fasta
     
 4. Take a look at the quast results with the following commands.
 <!-- -->
         cd quast_results/latest/
-	      less report.txt
+	less report.txt
 5. Next, we will download databases of gene sequences that will be used for the homology-based genome annotation. First, start a screen because the downloading process may take a while, then activate the funannotate conda environment. Move up two directories so you are in /home/usr/ then make a directory called funannotate_db.
         
         mkdir funannoate_db
@@ -42,4 +42,29 @@
 9. Check that the set up worked properly by running the following command.
 <!-- -->	
         funannotate database
+10. Download this file, which includes amino acid sequences from the Pezizomycotina that will be used during genome annotation. Upload the file to your VM and move it into the Tutorial #8 directory.
 
+### Create a bash script to clean, sort, and mask repititive regions
+
+1. First, create a file for your bash script and open it in nano. Remember, we are running commands via a bash script so we have a record of the commands we used in our analysis.
+<!-- -->
+	nano annotate.sh
+The first lines of your script should be the following.
+<!-- -->
+	#!/bin/bash
+	#Annoation of Sulcaria isidiifera genome
+	#Date
+
+Then, we will want to run each of the following three commands to prepare the assembly for annation. The first command, 'clean,' removes duplicate and very short contigs. The second command sords the contigs and scaffolds by length and renames them sequentially (i.e., contig 1 will be the longest contig after this step is run). The third step masks repetitive regions like transposable elements and telomeres.
+<!-- -->
+	funannotate clean -i Suis_consensus.fasta --minlen 2000 -o Suis_consensus.clean.fasta
+	funannotate sort -i Suis_consensus.clean.fasta -b scaffold -o Suis_consensus.sort.fasta
+	funannotate mask -i Suis_consensus.sort.fasta -cpus 8 -o SUISv1.fasta
+
+2. Exit nano and save your document. Use chmod to make the bash script executable, then run the following command.
+	bash -i annotate.sh
+
+### Genome annotation using homology searches
+
+
+	
