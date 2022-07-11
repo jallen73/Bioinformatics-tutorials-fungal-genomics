@@ -39,6 +39,12 @@ To download the reads use the following command.
 **The download will take a while**, so if you want to leave this screen while the download continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
 <!-- -->
         screen -r assembly
+7. Once the download is complete, you will have to decompress the directory using the following command.
+<!-- -->
+        tar -xvf Sulcaria_isidiifera.tar.gz 
+8. Once the decompression is complete, delete the original file that you downloaded to save space.
+<!-- -->
+        rm Sulcaria_isidiifera.tar.gz
         
 ### Documenation and bioinformatics
 
