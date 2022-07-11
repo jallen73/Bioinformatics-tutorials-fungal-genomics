@@ -58,9 +58,9 @@ Under ‘Machine Type’ select e2-standard-4
         
  If conda is correctly installed a list of packages will show up and look like the following screen.
  
- ![image](https://user-images.githubusercontent.com/17323363/176701759-46f776f1-50a1-40fd-853d-61a9ddb544d6.png)
+ <img src="https://user-images.githubusercontent.com/17323363/176701759-46f776f1-50a1-40fd-853d-61a9ddb544d6.png" width="300">
  
  7. Before leaving your computer, **be sure to stop this VM instance so you are not charged for it while nothing is running**. Close the shell and return to the webpage with your VM instance. Click the three vertical dots to the right of the VM instance, then select stop. To confirm that the VM has stopped look for the red circle with a square under status.
  
- ![image](https://user-images.githubusercontent.com/17323363/177423216-9e8c1529-4189-46ee-a978-06db1cad8473.png)
+<img src="https://user-images.githubusercontent.com/17323363/177423216-9e8c1529-4189-46ee-a978-06db1cad8473.png" width="300">
 
