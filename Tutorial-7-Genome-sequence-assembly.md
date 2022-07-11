@@ -32,18 +32,12 @@ Type `  y ` when prompted. Once the installation is finished `  deactivate quoti
 
 6. The raw fast5 files for *Sulcaria isidiifera* are available from the European Nucleotide Archive (https://www.ebi.ac.uk/ena/browser/view/PRJEB48709?show=reads). You can read more about this critically endangered lichen on the Red List website (https://www.iucnredlist.org/species/70386122/70386125). This sequence data was generated on the Nanopore MinION platform in the Allen Lichen Lab as part of the Org.one program.
 
-To download the fastq file, which will need for the genome assembly, **use [this link](https://drive.google.com/file/d/1aLqI3hcJEhuqUFDMXtCAXUaYMO2NIMpK/view?usp=sharing).** Guppy v5 in high accuracy mode was used to call the bases when generating this file.
+**To download the fastq file, which will need for the genome assembly, use [this link](https://drive.google.com/file/d/1aLqI3hcJEhuqUFDMXtCAXUaYMO2NIMpK/view?usp=sharing).** Guppy v5 in high accuracy mode was used to call the bases when generating this file.
 Upload the file to your VM and move it into the Tutorial #7 folder.
 
-**The download will take a while**, so if you want to leave this screen while the download continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
+**The upload will take a few minutes**, so if you want to leave this screen while the upload continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
 <!-- -->
         screen -r assembly
-7. Once the download is complete, you will have to decompress the directory using the following command.
-<!-- -->
-        tar -xvf Sulcaria_isidiifera.tar.gz 
-8. Once the decompression is complete, delete the original file that you downloaded to save space.
-<!-- -->
-        rm Sulcaria_isidiifera.tar.gz
         
 ### Documenation and bioinformatics
 
@@ -68,7 +62,7 @@ Now that we are running more complex and time-consuming analyses, we don’t wan
         #Genome assembly and polishing
         #
         conda activate flye
-        flye --nano-hq fast5_pass/*.fast5 --out-dir flyenanohq --threads 8  
+        flye --nano-hq Suis.pass.fastq.gz --out-dir flyenanohq --threads 8  
         conda deactivate
 
 Let’s break this script down a bit. On the first line we have the header text for all bash scripts. Then, I have a second line of text illustrating what beginning a line with ‘#’ does. Then we title this whole bash script that we are beginning. What is it that we are analyzing and for what project? Next I leave a line break so it is easier to read the script, then add the date and the specific tasks we are accomplishing. After that, another line break to help with readability. Then, we have to activate the conda environment for flye. On the next line we run flye. We use the –nano-hq flag to indicate that we are using high-accuracy nanopore reads. We name the output directory flyenanhq to indicate the assembler and the setting we used. Threads indicates the number of parallel threads to run the process with, here we set it to 8, which is maximum available on this VM. Finally, we deactivate the conda environment.
