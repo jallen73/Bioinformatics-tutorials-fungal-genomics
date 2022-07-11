@@ -19,8 +19,8 @@
     
 4. Take a look at the quast results with the following commands.
 <!-- -->
-        cd quast_results/latest/
-		less report.txt
+	cd quast_results/latest/
+	less report.txt
 5. Next, we will download databases of gene sequences that will be used for the homology-based genome annotation. First, start a screen because the downloading process may take a while, then activate the funannotate conda environment. Move up two directories so you are in /home/usr/ then make a directory called funannotate_db.
 <!-- -->        
         mkdir funannoate_db
