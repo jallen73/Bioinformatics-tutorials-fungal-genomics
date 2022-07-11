@@ -42,7 +42,7 @@
 9. Check that the set up worked properly by running the following command.
 <!-- -->	
         funannotate database
-10. Download this file, which includes amino acid sequences from the Pezizomycotina that will be used during genome annotation. Upload the file to your VM and move it into the Tutorial #8 directory.
+10. [Download this file](https://drive.google.com/file/d/1NkPOLwSY6vOgQc77EZxtYRIjtI5-INtJ/view?usp=sharing), which includes amino acid sequences from the Pezizomycotina that will be used during genome annotation. Upload the file to your VM and move it into the Tutorial #8 directory.
 
 ### Create a bash script to clean, sort, and mask repititive regions
 
@@ -66,5 +66,19 @@ Then, we will want to run each of the following three commands to prepare the as
 
 ### Genome annotation using homology searches
 
+1. Next, we will annotate the genome using homology searches. Reopen your script 'annotate.sh'. Use the ‘#’ to add a comment in front of all of the lines of code you just ran. You want to keep that code to reference later, but you don’t want to rerun it.
 
+2. Add the following two commands to your script. The backslashes here indicate that all three lines of code are part of the same command. We use the backslashes to make it easier for us to read long strings of code.
+<!-- -->
+	funannotate predict -i SUISv1.fasta -o suis_ann \
+	    --species "Sulcaria isidiifera" \
+	    --protein_evidence pezizo.pep \
+	    --busco_seed_species aspergillus_fumigatus --cpus 8
 	
+	funannotate annotate -i suis_ann --cpus 8
+
+3. Close and save your script. Then, run it using the following command.
+<!-- -->
+	bash -i annotate.sh
+
+This step will take a few hours to complete. Exit your screen using ctrl+a+d. You can close and leave the shell now, but make sure to leave your VM running until these steps are complete. 
