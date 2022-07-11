@@ -30,11 +30,10 @@ Type `  y ` when prompted. Once the installation is finished `  deactivate quoti
         cd Tutorial7-assembly
         conda activate quotidian
 
-6. The fastq files for *Sulcaria isidiifera* are available from the European Nucleotide Archive (https://www.ebi.ac.uk/ena/browser/view/PRJEB48709?show=reads). You can read more about this critically endangered lichen on the Red List website (https://www.iucnredlist.org/species/70386122/70386125). This sequence data was generated on the Nanopore MinION platform in the Allen Lichen Lab as part of the Org.one program.
+6. The raw fast5 files for *Sulcaria isidiifera* are available from the European Nucleotide Archive (https://www.ebi.ac.uk/ena/browser/view/PRJEB48709?show=reads). You can read more about this critically endangered lichen on the Red List website (https://www.iucnredlist.org/species/70386122/70386125). This sequence data was generated on the Nanopore MinION platform in the Allen Lichen Lab as part of the Org.one program.
 
-To download the reads use the following command. 
-<!-- -->
-        wget ftp://ftp.sra.ebi.ac.uk/vol1/run/ERR738/ERR7385058/Sulcaria_isidiifera.tar.gz
+To download the fastq file, which will need for the genome assembly, **use [this link](https://drive.google.com/file/d/1aLqI3hcJEhuqUFDMXtCAXUaYMO2NIMpK/view?usp=sharing).** Guppy v5 in high accuracy mode was used to call the bases when generating this file.
+Upload the file to your VM and move it into the Tutorial #7 folder.
 
 **The download will take a while**, so if you want to leave this screen while the download continues you can use 'Ctrl+a+d' to leave the screen and let it continue running. To see a list of all screens running at any given time use `  screen -ls  ` and to return to a screen use `  screen -r <name of screen>  `. We can return to the screen where the download is running using the following command.
 <!-- -->
