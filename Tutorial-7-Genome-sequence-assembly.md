@@ -2,7 +2,7 @@
 
 This tutorial includes how to use screens, download files from external sources using wget, assemble genome sequences from Nanopore MinION long-read sequence data using flye, and how to view assembly graphs using Bandage. Perhaps most importantly, it includes instructions for one way to document your analyses as you go. 
 
-#### Prepare your VM and conda environments
+### Prepare your VM and conda environments
 
 1. Start your VM and open a shell, then make a new directory for this tutorial.
 <!-- -->
@@ -18,7 +18,7 @@ Type `  y ` when prompted. Once the installation is finished `  deactivate quoti
 <!-- -->
         conda create -n flye -c bioconda flye
         
-#### Download the data
+### Download the data
 
 4. Once the installation is finished, move into the Tutorial7-assembly directory and start a screen. Screen allows you to start a subterminal within the shell that you are already working. Even if your computer disconnects from the internet, or the shell disconnects from the google server, processes you start in a screen will continue running and you can return it once you reestablish your connection. You can also use screens to simultaneously run multiple different processes. To install screen and start a screen run the following command.
 <!-- -->
@@ -40,7 +40,7 @@ To download the reads use the following command.
 <!-- -->
         screen -r assembly
         
-## Documenation and bioinformatics
+### Documenation and bioinformatics
 
 Keeping track of which commands you ran, in which order, with all of the specific options and settings you used is essential for reporting your results, and for conducting reproducible and verifiable analyses. There are many different approaches to documenting your analyses. In this class we will take a relatively simple approach.
 
@@ -77,7 +77,7 @@ Let’s break this script down a bit. On the first line we have the header text 
         bash -i SUISassembly.sh
 **Now is a good time to take a break. The assembly will take at least half a day to run.**
 
-#### Examining assembly results
+### Assembly graphs in Bandage
 
 While we wait for the assembly to finish we can download Bandage and look at some sample data.
 
@@ -92,8 +92,26 @@ While we wait for the assembly to finish we can download Bandage and look at som
 <img src="https://user-images.githubusercontent.com/17323363/178351275-bd77b1a8-af4c-487c-9e7a-65ae0551c123.png" width="300">
 7. Select the longest node by clicking on the longest thick line.
 8. Under 'Graph Display' change the color to 'color by depth.'
-<img src="https://user-images.githubusercontent.com/17323363/178351518-4c7249b1-a205-4ebd-a094-0a9786a7ffa2.png" width="100">
+<img src="https://user-images.githubusercontent.com/17323363/178351518-4c7249b1-a205-4ebd-a094-0a9786a7ffa2.png" width="200">
 9. Find a node that’s ~10,000 bp. Select it by clicking on it. Then navigate to Output > Copy selected node sequence to clipboard. 
 10. Open a web browser and navigate to blast on the NCBI database. Use blastn to search this sequences against the whole NCBI database. 
 11. Now select one of the thin lines. The thin lines are called edges. These represent the connections between two nodes. Take a look at what appears in the 'Selected edge' box on the right when you select a thin line.
-                                                                                                                           
+
+### Examining flye results
+
+1. If your google cloud connection reset since you launch your flye assembly, you can return to it now. You will first have to switch your user to ‘usr.’ Then, to reattach the screen use the following command: screen -r assembly
+2. Move into the output directory for your flye assembly. If you followed these instructions exactly the output path will be as follows: 
+<!-- -->
+        cd Tutorial7-assembly/flyenanohq
+
+3. Use ` ls ` to list all of the directory contents. 
+4. Let’s explore a few key components of the output. The ‘assembly_info.txt’ file is one of the most useful outputs. Use the less command to take a look at it. 
+<!-- -->
+        less assembly_info.txt
+5. The file with the actual assembled genome sequence is assembly.fasta, which you should also take a look at using less.
+6. Next, download the assembly graph. Check out instructions in tutorial #6 for how to download files. As a hint, you may want to start by running the following command.
+<!-- -->
+        readlink -f assembly_graph.gfa
+7. Once the assembly graph is downloaded, navigate back to Bandage and open this new assembly graph. This assembly graph is much more complicated than the data that comes with Bandage.
+
+The data you assembled comes from an organism with a very diverse microbiome. Lichens host an incredible amount of bacterial, fungal, algal and animal diversity. The next step in genome assembly is metagenomic filtering, which is not included in this set of tutorials as it is a fairly complex process. Thus, we will skip straight to genome annotation in the next step and use an assembly that has already been filtered to include only the the lichenized fungal genome.                                                                                                                         
