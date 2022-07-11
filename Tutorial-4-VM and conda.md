@@ -16,13 +16,13 @@ In this tutorial we will configure a VM on Google Cloud and install conda, a ver
 
 3. Next, we will change a few settings from the default to create a slightly more powerful VM with more storage.
 First give your VM a name and select a region from which the VM will be hosted. 
-Under ‘Machine Type’ select e2-standard-4
+Under ‘Machine Type’ select e2-standard-8
 
-<img src="https://user-images.githubusercontent.com/17323363/176699993-fb779702-80b6-4ef5-956c-96402197bba1.png" width="400">
+<img src="https://user-images.githubusercontent.com/17323363/178347034-89b0d5ec-820a-45ac-98e8-7ae70257d37c.png" width="400">
 
-4. Select boot disk, then change the boot disk size to 15 GB to give yourself plenty of space to work with. Then click ‘Select.’
+4. Select boot disk, then change the boot disk size to 300 GB to give yourself plenty of space to work with. Then click ‘Select.’
 
-<img src="https://user-images.githubusercontent.com/17323363/176700065-fbceab34-5807-4e7a-9762-9855a9ae2b6b.png" width="400">
+<img src="https://user-images.githubusercontent.com/17323363/178346756-7c182e4e-abf8-464c-a4d1-3f9d37fd7ba5.png" width="400">
 
 5. Finally, under firewall select Allow HTTP traffic and allow HTTPS traffic. Then click Create.
 
