@@ -99,7 +99,7 @@ There are many different reasons one may want to annotate a genome, including co
 <!-- -->
 	nano apn2.fasta
 	
->QEL51145.1 abasic endonuclease/DNA lyase [Letharia vulpina]
+>\>QEL51145.1 abasic endonuclease/DNA lyase [Letharia vulpina]
 MGLRITTWNVNGIRNPFGYQPWRDKRSFAAMFDILEADIVVFQETKIQRKDLSDDMVLVPGWDCYFSLPR
 HKKGYSGVVIYTRQSVCAPIRAEEGITGLLCSPNSSTNFSNLPEEQQIGGYPTPAQLAASAVDATTLDAE
 GRSVVLEFPAFVLFGVYSPANRDETRDDFRLGFLDVLDARIRNLIAMGKRVFLTGDFNISREELDAANAE
@@ -115,4 +115,19 @@ GAKEKNTQWRCQTFIWCSDWNPNATNG
 <!-- -->	
 	blastp -db SUIS.proteins.fasta -query apn2.fasta > apn2_blast.out
 	
-4. Look at your output using the less command. Deactivate the blast conda environment.
+4. Look at your output using the less command. **note the name/number of the amino acid sequences that is the top hit result from your blast search. It should be something like 'FUN_009402-T1.'** Write down the name of the hit as you will need it in the next step. Deactivate the blast conda environment.
+
+5. Next, we will extract the full APN2 amino acid sequence from the Suis annotations using samtools. First, install samtools in the quotidian conda environment.
+<!-- -->
+	conda activate quotidian
+	conda install -c bioconda samtools
+	conda deactivate
+	conda activate quotidian
+	
+Then, index the proteins.fa file. Once it is indexed you can search specifically for the annotion that was the top hit for APN2 and redirect it to a fasta file. **rember to replace the 'FUN' number below with the number that was the best blast hit in the step above.**
+<!-- -->
+	samtools faidx Sulcaria_isidiifera.proteins.fa
+	samtools faidx Suclaria_isidiifera.proteins.fa FUN_009402-T1 > suis_apn2.fasta
+
+6. Look at the contents of the stde_apn2.fasta file using less. Open a web browser with ncbi blast. We will now use blastp to search this amino acid sequence against the whole NCBI protein database to see what the best match is for the recovered putative APN2 gene. 
+
