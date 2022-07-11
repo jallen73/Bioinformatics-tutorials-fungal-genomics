@@ -1,2 +1,2 @@
-##Tutorial #8 Genome annotation with funannotate
+## Tutorial #8 Genome annotation with funannotate
 
