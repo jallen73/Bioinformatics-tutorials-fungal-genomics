@@ -8,6 +8,7 @@
         mkdir Tutorial8-annotation
         cd Tutorial8-annotation
 2. Download the SUIS_asco_consensus.fasta file using [this link](https://drive.google.com/file/d/1VQ8LJJXiCIkn24742e6cW8oSfLA5AL5H/view?usp=sharing), upload it to your VM, then move it into the Tutorial #8 directory.
+<!-- -->
         mv SUIS_asco_consensus.fasta .
         
 3. Examine basic statistics about this genome assembly using Quast (http://quast.sourceforge.net/). First make a new conda environment,  install quast, activate quast, then run it.
@@ -21,7 +22,7 @@
         cd quast_results/latest/
 	less report.txt
 5. Next, we will download databases of gene sequences that will be used for the homology-based genome annotation. First, start a screen because the downloading process may take a while, then activate the funannotate conda environment. Move up two directories so you are in /home/usr/ then make a directory called funannotate_db.
-        
+<!-- -->        
         mkdir funannoate_db
         screen -S fun
         conda create -n funannotate -c bioconda funannotate
@@ -62,6 +63,7 @@ Then, we will want to run each of the following three commands to prepare the as
 	funannotate mask -i Suis_consensus.sort.fasta -cpus 8 -o SUISv1.fasta
 
 2. Exit nano and save your document. Use chmod to make the bash script executable, then run the following command.
+<!-- -->	
 	bash -i annotate.sh
 
 ### Genome annotation using homology searches
