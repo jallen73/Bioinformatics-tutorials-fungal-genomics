@@ -129,5 +129,38 @@ Then, index the proteins.fa file. Once it is indexed you can search specifically
 	samtools faidx Sulcaria_isidiifera.proteins.fa
 	samtools faidx Suclaria_isidiifera.proteins.fa FUN_009402-T1 > suis_apn2.fasta
 
-6. Look at the contents of the stde_apn2.fasta file using less. Open a web browser with ncbi blast. We will now use blastp to search this amino acid sequence against the whole NCBI protein database to see what the best match is for the recovered putative APN2 gene. 
+6. Look at the contents of the suis_apn2.fasta file using less. Open a web browser with ncbi blast. Now, use blastp to search this amino acid sequence against the whole NCBI protein database to see what the best match is for the recovered putative APN2 gene. 
 
+### Genome browsing in IGV
+
+1. First, we use samtools faidx to index the genome with the following command.
+<!-- -->
+	samtools faidx Sulcaria_isidiifera.scaffolds.fa
+	
+2. Then download the genome fasta file and the index file to your local machine. The name of the index file is the same as the scaffolds file, but ‘fai’ is added to the end. You can use the following command to get the full path to the file to make it quicker to download.
+<!-- -->
+	readlink -f Sulcaria_isidiifera.scaffolds.fa
+	readlink -f Sulcaria_isidiifera.scaffolds.fa.fai
+	
+3. You should also download the annotation file, Sulcaria_isidiifera.gff3
+4. Navigate to the following website: https://igv.org/app/. To upload the scaffolds, select genome in the upper left of the screen > local file
+
+<img src="https://user-images.githubusercontent.com/17323363/178366817-32c74d55-f99d-4760-bdd1-04dae775dede.png" width="700">
+
+Hold down ‘ctrl’ to simultaneously select both the .fa and the .fai files, then push open.
+
+![image](https://user-images.githubusercontent.com/17323363/178366937-272c8864-4b81-4432-a489-5a370a902c61.png)
+
+5. Select tracks>local file and select the .gff3 file.
+
+![image](https://user-images.githubusercontent.com/17323363/178366988-a2ef4a16-0605-46c4-a053-54c23dfb04ef.png)
+
+6. Now, you should be able to see your annotations across the genome. To look at our gene of interest, APN2, search for the gene name (i.e., FUN_####-T1).
+
+![image](https://user-images.githubusercontent.com/17323363/178367164-3c70e08c-cc9a-49f7-b51c-8e84715055c2.png)
+
+7. You can copy gene DNA sequences from surrounding annotations by right clicking on them, then selecting ‘Copy feature sequence.’
+8. 
+![image](https://user-images.githubusercontent.com/17323363/178367227-d41acb3b-f0be-4515-ae84-cff90a9f8a9f.png)
+
+9. You can then use blastx on the NCBI server to search this nucleotide sequence against the protein database to see if there are any close matches in the database.
