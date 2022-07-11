@@ -10,17 +10,17 @@ We will start by working with the National Center for Biotechnology Information 
 
 1. Navigate to the following URL: https://www.ncbi.nlm.nih.gov/nucleotide/
 
-2.	Start by searching: ‘Pseudocyphellaria mallota ITS’
+2. Start by searching: ‘Pseudocyphellaria mallota ITS’
 
-3.	Click on the first item returned and read through the information associated with this sequence.
+3. Click on the first item returned and read through the information associated with this sequence.
 
-5.	Click ‘FASTA’ at the top to see the sequences in fasta format.
+5. Click ‘FASTA’ at the top to see the sequences in fasta format.
 
-6.	Open another tab and navigate to blast using this URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+6. Open another tab and navigate to blast using this URL: https://blast.ncbi.nlm.nih.gov/Blast.cgi
 
-7.	There are multiple different types of blast to choose from. We will use Nucleotide BLAST for now.
+7. There are multiple different types of blast to choose from. We will use Nucleotide BLAST for now.
 
-8.	Go back to the previous tab. You can either copy-paste the accession number (circled below in red) or the full sequence from this page to the ‘Enter Query Sequence’ box on the blast page.
+8. Go back to the previous tab. You can either copy-paste the accession number (circled below in red) or the full sequence from this page to the ‘Enter Query Sequence’ box on the blast page.
 
 <img src="https://user-images.githubusercontent.com/17323363/177419182-99aeacc5-2fe9-475e-a07b-24351aa3285b.png" width="600">
 
@@ -34,9 +34,9 @@ Many different scores are given for each match. You can see here that the highes
 
 You can read more about what each of the values in the output table mean for how well each database entry matched your query sequence at the bottom of this page: https://www.ncbi.nlm.nih.gov/Web/Newsltr/V15N2/BLView.html 
 
-9. There is a lot to explore here, but for now we are going to do a second search. Return to the tab for the NCBI nucleotide database where you initially searched for the sequence you used as a query sequence.  
+9. There is a lot to explore here, but for now we are going to do a second search. Return to the tab for the NCBI nucleotide database where you initially searched for the sequence you used as a query sequence. Run a second search with the following search terms: 'Pseudocyphellaria ITS' 
 
-10.	Next, we want to select all 12 of these sequences. Click ‘send to’ in the top right, select ‘file’ and select ‘FASTA’ for the format. Then, click 'Create File' and a fasta file will download.
+10.	Next, we want to select all of these sequences. Click ‘send to’ in the top right, select ‘file’ and select ‘FASTA’ for the format. Then, click 'Create File' and a fasta file will download.
 
 <img src="https://user-images.githubusercontent.com/17323363/177420539-b67bcf33-c063-4170-8b8e-9ff8fdffe15d.png" width="400">
 
@@ -90,7 +90,7 @@ ACCCCTCCAGCGCGGCTGGGTGATGGGCGGCGTCCCCCCCGGGGACGGGCCCGAACGGCAGTGGCGGCCC
 GGCGTGGCTCCCAGCGCGGTGAATTTCGTTCGCTGGGGAGGCGCGCCCGGGTCCGGCCAGTCAACCCTGT
 GGCTTTGCAGTTTGACCTCGGATCAGGTAGGGATA
 
-8. Upload the fasta file you downloaded earlier with the 12 *Pseudocyphellaria mallota* ITS sequences (see Tutorial #4 for how to upload a file). You will notice that the file was not uploaded into your current directory, Tutorial5-BLAST, but was instead uploaded to your home directory. You can move it into your current directory using the following command. Note that we are directing the command to find the file named 'sequence.fasta' in the directory above the current directly using '..' and we are telling it to put the file in our current directory using '.'
+8. Upload the fasta file you downloaded earlier with all of the *Pseudocyphellaria* ITS sequences (see Tutorial #4 for how to upload a file). You will notice that the file was not uploaded into your current directory, Tutorial5-BLAST, but was instead uploaded to your home directory. You can move it into your current directory using the following command. Note that we are directing the command to find the file named 'sequence.fasta' in the directory above the current directly using '..' and we are telling it to put the file in our current directory using '.'
 <!-- -->
         mv ../sequence.fasta .
  
@@ -102,4 +102,22 @@ GGCTTTGCAGTTTGACCTCGGATCAGGTAGGGATA
 <!-- -->
         makeblastdb -in PseuITS.fasta -out PseuITS.fasta -dbtype nucl
         
+Note that a blast database is comprised of seven different files. All files must be located in the same directory for the database to work.
+
+10. Next, we will use the PSMA.fasta file as a query sequence and search against the blast database that you just made. To do this, run the following command.
+<!-- -->
+        blastn -db PseuITS.fasta -query PSMA.fast
+ 
+You'll notice that the output of this search shows up on your screen in the standard output. To send the output to a file so you can view it later run the following command where the search is the same, but the output is redirected to a file. 
+ <!-- -->
+        blastn -db PseuITS.fasta -query PSMA.fast > PSMA_blast_results.txt
+
+You can now examine the blast results using less.
+<!-- -->
+        less PSMA_blast_results.txt
         
+The results should look very similar to the results from step #12 in the first part of this tutorial where you were using web-based blast.
+
+Blast has a ton of additional functionality that we will explore in later labs. Once you are done with this tutorial, be sure to stop your VM instance.
+
+
