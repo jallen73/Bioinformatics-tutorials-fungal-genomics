@@ -7,7 +7,7 @@
 <!-- -->
         mkdir Tutorial8-annotation
         cd Tutorial8-annotation
-2. Download the SUIS_asco_consensus.fasta file from this GitHub repository, upload it to your VM, then move it into the Tutorial #8 directory.
+2. Download the SUIS_asco_consensus.fasta file using [this link](https://drive.google.com/file/d/1VQ8LJJXiCIkn24742e6cW8oSfLA5AL5H/view?usp=sharing), upload it to your VM, then move it into the Tutorial #8 directory.
         mv SUIS_asco_consensus.fasta .
         
 3. Examine basic statistics about this genome assembly using Quast (http://quast.sourceforge.net/). First make a new conda environment,  install quast, activate quast, then run it.
