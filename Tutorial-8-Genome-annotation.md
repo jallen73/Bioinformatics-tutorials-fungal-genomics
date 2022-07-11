@@ -2,7 +2,7 @@
 
 
 
-## Set up funannoate and required databases
+### Set up funannotate and required databases
 1. Start your VM and open a shell. Make a new directory for this tutorial and move into.
 <!-- -->
         mkdir Tutorial8-annotation
