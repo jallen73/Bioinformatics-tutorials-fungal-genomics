@@ -92,7 +92,7 @@ While we wait for the assembly to finish we can download Bandage and look at som
 <img src="https://user-images.githubusercontent.com/17323363/178351275-bd77b1a8-af4c-487c-9e7a-65ae0551c123.png" width="300">
 7. Select the longest node by clicking on the longest thick line.
 8. Under 'Graph Display' change the color to 'color by depth.'
-<img src=https://user-images.githubusercontent.com/17323363/178351518-4c7249b1-a205-4ebd-a094-0a9786a7ffa2.png" width="100">
+<img src="https://user-images.githubusercontent.com/17323363/178351518-4c7249b1-a205-4ebd-a094-0a9786a7ffa2.png" width="100">
 9. Find a node that’s ~10,000 bp. Select it by clicking on it. Then navigate to Output > Copy selected node sequence to clipboard. 
 10. Open a web browser and navigate to blast on the NCBI database. Use blastn to search this sequences against the whole NCBI database. 
 11. Now select one of the thin lines. The thin lines are called edges. These represent the connections between two nodes. Take a look at what appears in the 'Selected edge' box on the right when you select a thin line.
