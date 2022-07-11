@@ -69,7 +69,7 @@ Now that we are running more complex and time-consuming analyses, we don’t wan
         #Genome assembly and polishing
         #
         conda activate flye
-        flye --nano-hq Sulcaria_isidiifera.tar.gz --out-dir flyenanohq --threads 8  
+        flye --nano-hq fast5_pass/*.fast5 --out-dir flyenanohq --threads 8  
         conda deactivate
 
 Let’s break this script down a bit. On the first line we have the header text for all bash scripts. Then, I have a second line of text illustrating what beginning a line with ‘#’ does. Then we title this whole bash script that we are beginning. What is it that we are analyzing and for what project? Next I leave a line break so it is easier to read the script, then add the date and the specific tasks we are accomplishing. After that, another line break to help with readability. Then, we have to activate the conda environment for flye. On the next line we run flye. We use the –nano-hq flag to indicate that we are using high-accuracy nanopore reads. We name the output directory flyenanhq to indicate the assembler and the setting we used. Threads indicates the number of parallel threads to run the process with, here we set it to 8, which is maximum available on this VM. Finally, we deactivate the conda environment.
