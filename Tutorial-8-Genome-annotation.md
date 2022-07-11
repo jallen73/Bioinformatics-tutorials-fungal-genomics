@@ -1,5 +1,8 @@
 ## Tutorial #8 Genome annotation with funannotate
 
+
+
+## Set up funannoate and required databases
 1. Start your VM and open a shell. Make a new directory for this tutorial and move into.
 <!-- -->
         mkdir Tutorial8-annotation
