@@ -84,3 +84,35 @@ Then, we will want to run each of the following three commands to prepare the as
 	bash -i annotate.sh
 
 This step will take a few hours to complete. Exit your screen using ctrl+a+d. You can close and leave the shell now, but make sure to leave your VM running until these steps are complete. 
+
+### Explore your genome annotation results
+
+There are many different reasons one may want to annotate a genome, including conducting comparative genomics of many different organsims and identifying protein sequences to synthesize  and test antimicrobial qualities. In the example today we are interested in finding a specific protein in the genome, looking at where the protein occurs in relation to other proteins in the genome, and modeling its secondary structure. In this lab we will find the *APN2* gene, which is highly conserved gene that is part of the mating type locus in fungi.
+
+1. Make a blast database out of the protein sequences of the annotations using the following command.
+<!-- -->
+	cd suis_ann/annotate_results
+	conda activate blast
+	makeblastdb -in Sulcaria_isidiifera.proteins.fa -out SUIS.proteins.fasta -dbtype prot 
+
+2. The sequence below will be the query. Make a file called apn2.fasta using nano, and paste the following sequence into it.
+<!-- -->
+	nano apn2.fasta
+	
+>QEL51145.1 abasic endonuclease/DNA lyase [Letharia vulpina]
+MGLRITTWNVNGIRNPFGYQPWRDKRSFAAMFDILEADIVVFQETKIQRKDLSDDMVLVPGWDCYFSLPR
+HKKGYSGVVIYTRQSVCAPIRAEEGITGLLCSPNSSTNFSNLPEEQQIGGYPTPAQLAASAVDATTLDAE
+GRSVVLEFPAFVLFGVYSPANRDETRDDFRLGFLDVLDARIRNLIAMGKRVFLTGDFNISREELDAANAE
+VSMRKQGLTGLEFVSTPARRLFNHLLEGGKVFGERDEGREHSVLWDICRAFHPDRKGMFTCWEQKVNARP
+GNCGARIDYVLCSLTMKDWFSDSNIQEGLMGSDHCPVYAVMKDAIFMDGVERDLRDVMNPPGMFSGGKRQ
+REYSATSDPLPSSGKLIPEFFGRRNIRDMFAQKPSLPQSQSNGNSNKVAEVSGVTAANQGNSTAEMLGPI
+EETAVEPCDSSVRVPTISPSAVGQKRSAPATTGSKSTKRGKSVFATAAAPMTGKGQQSLKGFFKPSAALI
+SSVASAIHVREVPQTSLNDDTVGRAPADLAETYPAPDGHMKAASLESAIHTPRKVGTQHIPGESRFANAS
+PIRNHKSVNQPQENVHDPVQSKESWSKLFTKPAAPRCEGHDEPCISLLTKKPGMNLGRSFWMCPRPLGPS
+GAKEKNTQWRCQTFIWCSDWNPNATNG
+
+3. Then, use this sequence as the query with blastp to search against the full complement of protein sequences and redirect the output to a file called apn2_blast.txt
+<!-- -->	
+	blastp -db SUIS.proteins.fasta -query apn2.fasta > apn2_blast.out
+	
+4. Look at your output using the less command. Deactivate the blast conda environment.
