@@ -34,9 +34,9 @@ Many different scores are given for each match. You can see here that the highes
 
 You can read more about what each of the values in the output table mean for how well each database entry matched your query sequence at the bottom of this page: https://www.ncbi.nlm.nih.gov/Web/Newsltr/V15N2/BLView.html 
 
-9. There is a lot to explore here, but for now we are going to do a second search. Return to the tab for the NCBI nucleotide database where you initially searched for the sequence you used as a query sequence. Run a second search with the following search terms: 'Pseudocyphellaria ITS' 
+9. There is a lot to explore here, but for now we are going to do a second search. Return to the tab for the NCBI nucleotide database where you initially searched for the sequence you used as a query sequence.
 
-10.	Next, we want to select all of these sequences. Click ‘send to’ in the top right, select ‘file’ and select ‘FASTA’ for the format. Then, click 'Create File' and a fasta file will download.
+10.	Next, we want to download of these sequences. Click ‘send to’ in the top right, select ‘file’ and select ‘FASTA’ for the format. Then, click 'Create File' and a fasta file will download.
 
 <img src="https://user-images.githubusercontent.com/17323363/177420539-b67bcf33-c063-4170-8b8e-9ff8fdffe15d.png" width="400">
 
@@ -90,7 +90,7 @@ ACCCCTCCAGCGCGGCTGGGTGATGGGCGGCGTCCCCCCCGGGGACGGGCCCGAACGGCAGTGGCGGCCC
 GGCGTGGCTCCCAGCGCGGTGAATTTCGTTCGCTGGGGAGGCGCGCCCGGGTCCGGCCAGTCAACCCTGT
 GGCTTTGCAGTTTGACCTCGGATCAGGTAGGGATA
 
-8. Upload the fasta file you downloaded earlier with all of the *Pseudocyphellaria* ITS sequences (see Tutorial #4 for how to upload a file). You will notice that the file was not uploaded into your current directory, Tutorial5-BLAST, but was instead uploaded to your home directory. You can move it into your current directory using the following command. Note that we are directing the command to find the file named 'sequence.fasta' in the directory above the current directly using '..' and we are telling it to put the file in our current directory using '.'
+8. Upload the fasta file you downloaded earlier with all of the *Pseudocyphellaria mallota* ITS sequences (see Tutorial #4 for how to upload a file). You will notice that the file was not uploaded into your current directory, Tutorial5-BLAST, but was instead uploaded to your home directory. You can move it into your current directory using the following command. Note that we are directing the command to find the file named 'sequence.fasta' in the directory above the current directly using '..' and we are telling it to put the file in our current directory using '.'
 <!-- -->
         mv ../sequence.fasta .
  
