@@ -76,3 +76,24 @@ Let’s break this script down a bit. On the first line we have the header text 
 <!-- -->
         bash -i SUISassembly.sh
 **Now is a good time to take a break. The assembly will take at least half a day to run.**
+
+#### Examining assembly results
+
+While we wait for the assembly to finish we can download Bandage and look at some sample data.
+
+1. Download the program Bandage, which we will use to look at our assembly graphs: https://rrwick.github.io/Bandage/
+2. Move the folder onto the desktop, right click and select ‘extract all’ to decompress the file. 
+3. Open the decompressed folder, than open the folder title ‘Bandage’ within that folder. 
+4. To start Bandage click the word Bandage with the assembly graph symbol next to it: 
+<img src="https://user-images.githubusercontent.com/17323363/178351250-c537840e-21e6-41d0-9a75-a896713f500f.png" width="300">
+
+5. Open the sample data by clicking: File > Load graph > then selecting ‘sample_LastGraph’ that was provided with the program download.
+6. Next, click ‘Draw graph’
+<img src="https://user-images.githubusercontent.com/17323363/178351275-bd77b1a8-af4c-487c-9e7a-65ae0551c123.png" width="300">
+7. Select the longest node by clicking on the longest thick line.
+8. Under 'Graph Display' change the color to 'color by depth.'
+<img src=https://user-images.githubusercontent.com/17323363/178351518-4c7249b1-a205-4ebd-a094-0a9786a7ffa2.png" width="100">
+9. Find a node that’s ~10,000 bp. Select it by clicking on it. Then navigate to Output > Copy selected node sequence to clipboard. 
+10. Open a web browser and navigate to blast on the NCBI database. Use blastn to search this sequences against the whole NCBI database. 
+11. Now select one of the thin lines. The thin lines are called edges. These represent the connections between two nodes. Take a look at what appears in the 'Selected edge' box on the right when you select a thin line.
+                                                                                                                           
