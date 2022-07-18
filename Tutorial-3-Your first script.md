@@ -44,5 +44,5 @@ We can, and will often, pass files as inputs into scripts as well. We will write
         
 #### Commands used in this tutorial
 
-chmod = used to change the permissions for files and directories. Read the documentation for this tool for more details on how to use it.
+chmod = used to change the permissions for files and directories. Read the documentation for this tool for more details on how to use it.       
 echo = prints text to standard out
