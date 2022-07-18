@@ -2,7 +2,6 @@
 
 Before beginning this tutorial you should sign up and set up an account on **[Google Cloud](https://cloud.google.com)**.
 
-### Part 1. Setting up a budget in google cloud
 
 This step is essential and very important to complete before continuing with this set of tutorials. If you skip this portion of the tutorials you may end up accidently spending more money than you planned on compute time on Google Cloud. By following the steps below you will set the maximum budget for all processes on Google Cloud to $100 and set alerts to let you know once you’ve spent 50%, 90% and 100% of the budget. By setting the number low, you will have plenty of funds left to complete the course even if you accidently forget to stop a virtual machine or other computational process.
 
