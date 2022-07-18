@@ -55,7 +55,7 @@ You just searched a smaller set of sequences for similarity to your query sequen
 
 2. Once you are on this page, click the three vertical dots on the far right of the VM and clicke 'Start/Resume.' Once the circle to the left turns green with a white check mark, click SSH to open a shell.
 
-![image](https://user-images.githubusercontent.com/17323363/177423041-38e4d20d-f3ef-4af6-b616-d458334db20a.png)
+<img src="https://user-images.githubusercontent.com/17323363/177423041-38e4d20d-f3ef-4af6-b616-d458334db20a.png" width="400">
 
 3. We will start by creating a conda environment for blast and installing it. Execute the following command. When asked whether or not you would like to proceed, type 'y' for yes. The options after calling conda indicate the following:   
         'create' - make a new conda environment   
@@ -80,7 +80,7 @@ You just searched a smaller set of sequences for similarity to your query sequen
         
 7. Make a file called PSMA.fasta whose contents are the sequence below using nano (check Tutorial #2 for hints). 
 
->EU558739.1 Pseudocyphellaria mallota voucher Stenroos 5556 (TUR) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
+>'>EU558739.1 Pseudocyphellaria mallota voucher Stenroos 5556 (TUR) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
 GTCGTAACAAGGTCTCCGTAGGTGAACCTGCGGAGGGATCATTACCGAGAGAGGCTCGCGCCTCGGGGGC
 TTTGGCCCCCGTCGTCTCACCCGTGCGCACATCCACCGGTGTTGCCTTTGGCGGCCTCTGCCGCGCAAGA
 ACCCCAACTCTTTGCAACGTTTGTGTCGTCCGAGTGGTTACCGAATAACTAAAACTTTCAACAACGGATC
