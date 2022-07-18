@@ -80,7 +80,7 @@ You just searched a smaller set of sequences for similarity to your query sequen
         
 7. Make a file called PSMA.fasta whose contents are the sequence below using nano (check Tutorial #2 for hints). 
 
->'>EU558739.1 Pseudocyphellaria mallota voucher Stenroos 5556 (TUR) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
+>\>EU558739.1 Pseudocyphellaria mallota voucher Stenroos 5556 (TUR) small subunit ribosomal RNA gene, partial sequence; internal transcribed spacer 1, 5.8S ribosomal RNA gene, and internal transcribed spacer 2, complete sequence; and large subunit ribosomal RNA gene, partial sequence
 GTCGTAACAAGGTCTCCGTAGGTGAACCTGCGGAGGGATCATTACCGAGAGAGGCTCGCGCCTCGGGGGC
 TTTGGCCCCCGTCGTCTCACCCGTGCGCACATCCACCGGTGTTGCCTTTGGCGGCCTCTGCCGCGCAAGA
 ACCCCAACTCTTTGCAACGTTTGTGTCGTCCGAGTGGTTACCGAATAACTAAAACTTTCAACAACGGATC
