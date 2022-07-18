@@ -48,7 +48,7 @@ You can read more about what each of the values in the output table mean for how
 
 You just searched a smaller set of sequences for similarity to your query sequence, rather than searching the entire NCBI nucleotide database. We will now repeat this smaller search in your Google Cloud VM.
 
-#### Command-line BLAST on the virtual machine
+### Command-line BLAST on the virtual machine
 
 1. To navigate to your virtual machine, go to the Google Cloud Console, then click the three horizontal lines in the top left corner > Compute Engine > VM Instances.
 <img src="https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png" width="300">
