@@ -1,4 +1,4 @@
-# Tutorial #2 Shell Basics
+# Tutorial #2 Linux Shell Basics
 
 This tutorial shows users how to open a shell in Google Cloud and introduces some handy basic functions to help navigate Google Cloud shell. These commands are the same in both Cloud Shell and a Linux-based shell. 
 
