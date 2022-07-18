@@ -30,7 +30,7 @@ Under ‘Machine Type’ select e2-standard-8
 
 6. You will be automatically redirected to a screen with a list of VMs that you have built. At this point there should just be the one VM. Once the symbol under 'Status' turns into a green circle with a white checkmark the VM is ready to be used. To open a shell for this VM click 'SSH' under connect.
 
-<img src="https://user-images.githubusercontent.com/17323363/176700404-d26c9321-169e-4347-93c8-935b07124182.png" width="400">
+<img src="https://user-images.githubusercontent.com/17323363/176700404-d26c9321-169e-4347-93c8-935b07124182.png" width="600">
 
 #### Install mininconda
 
