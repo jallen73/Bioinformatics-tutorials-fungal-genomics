@@ -51,11 +51,11 @@ You just searched a smaller set of sequences for similarity to your query sequen
 #### Command-line BLAST on the virtual machine
 
 1. To navigate to your virtual machine, go to the Google Cloud Console, then click the three horizontal lines in the top left corner > Compute Engine > VM Instances.
-<img src="https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png" width="400">
+<img src="https://user-images.githubusercontent.com/17323363/177422128-dcec7fbc-d3f9-43ce-ae50-1e8c5d1bfb0b.png" width="300">
 
 2. Once you are on this page, click the three vertical dots on the far right of the VM and clicke 'Start/Resume.' Once the circle to the left turns green with a white check mark, click SSH to open a shell.
 
-<img src="https://user-images.githubusercontent.com/17323363/177423041-38e4d20d-f3ef-4af6-b616-d458334db20a.png" width="400">
+<img src="https://user-images.githubusercontent.com/17323363/177423041-38e4d20d-f3ef-4af6-b616-d458334db20a.png" width="200">
 
 3. We will start by creating a conda environment for blast and installing it. Execute the following command. When asked whether or not you would like to proceed, type 'y' for yes. The options after calling conda indicate the following:   
         'create' - make a new conda environment   
