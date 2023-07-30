@@ -17,7 +17,7 @@ By the end of the course students will be able to:
 
 ### Acknowledgements
 
-Creation of these tutorials was supported by The National Science Foundation DEB #2115191 and Eastern Washington University.
+Creation of these tutorials was supported by The National Science Foundation DEB #2115191 and Eastern Washington University. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
 
 <img src="https://user-images.githubusercontent.com/17323363/179559477-c3fdfa60-9886-405b-9aea-124c9305ad88.png" width="100"> <img src="https://user-images.githubusercontent.com/17323363/179559504-9ec579ac-a34e-4279-8472-f3f17df77025.png" width="300">
 
